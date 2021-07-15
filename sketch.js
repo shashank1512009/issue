@@ -62,7 +62,7 @@ function setup() {
   poly = Bodies.circle(50,100,50)
   World.add(world,poly)
 
-  sling = new SlingShot(poly.body, { x:100, y:255  });
+  chain = new SlingShot(poly, { x:100, y:255  });
   
 
 }
@@ -71,7 +71,7 @@ function draw() {
  imageMode(CENTER)
   image(polygon_img,poly.position.x,poly.position.y,50,50) 
 
-  sling.display();
+  chain.display();
 
   textSize(20);
   fill("lightyellow");
@@ -127,7 +127,7 @@ function draw() {
   }
   
   function mouseReleased() {
-    sling.fly();
+    chain.fly();
   }
 
 
